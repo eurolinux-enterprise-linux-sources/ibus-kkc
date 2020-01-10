@@ -1,6 +1,6 @@
 Name:		ibus-kkc
 Version:	1.5.18
-Release:	4%{?dist}
+Release:	5%{?dist}
 Summary:	Japanese Kana Kanji input method for ibus
 
 Group:		System Environment/Libraries
@@ -8,6 +8,7 @@ License:	GPLv2+
 URL:		https://bitbucket.org/libkkc
 Source0:	https://bitbucket.org/libkkc/ibus-kkc/downloads/%{name}-%{version}.tar.gz
 Patch0:		ibus-kkc-ignore-errors.patch
+Patch1:		ibus-kkc-optimize-update-property.patch
 
 BuildRequires:	vala
 BuildRequires:	intltool
@@ -24,6 +25,7 @@ A Japanese Kana Kanji Input Method Engine for ibus.
 %prep
 %setup -q
 %patch0 -p1 -b .ignore-errors
+%patch1 -p1 -b .optimize-update-property
 rm src/*vala.stamp
 # don't touch XKB layout under Fedora
 sed -i 's!<layout>jp</layout>!<layout>default</layout>!' src/kkc.xml.in.in
@@ -51,6 +53,9 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/ibus-setup-kkc.deskt
 
 
 %changelog
+* Mon Jun  9 2014 Daiki Ueno <dueno@redhat.com> - 1.5.18-5
+- add ibus-kkc-optimize-update-property.patch (Closes: #1096888)
+
 * Wed Feb 12 2014 Daiki Ueno <dueno@redhat.com> - 1.5.18-4
 - add ibus-kkc-ignore-errors.patch (Closes: #1063564)
 
