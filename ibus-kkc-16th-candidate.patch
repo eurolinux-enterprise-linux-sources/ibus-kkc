@@ -1,0 +1,27 @@
+From 7f1776488804e1ab40d036bdb7a37b51b3f47bfd Mon Sep 17 00:00:00 2001
+From: Daiki Ueno <ueno@gnu.org>
+Date: Wed, 2 Sep 2015 16:03:22 +0900
+Subject: [PATCH] engine: Support selecting 16th candidate by key
+
+Reported by Bhushan Barve.
+---
+ src/engine.vala | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+Index: ibus-kkc-1.5.18/src/engine.vala
+===================================================================
+--- ibus-kkc-1.5.18.orig/src/engine.vala
++++ ibus-kkc-1.5.18/src/engine.vala
+@@ -421,8 +421,10 @@ class KkcEngine : IBus.Engine {
+         return prop;
+     }
+ 
+-    string[] LOOKUP_TABLE_LABELS = {"1", "2", "3", "4", "5", "6", "7",
+-                                    "8", "9", "0", "a", "b", "c", "d", "e"};
++    static const string[] LOOKUP_TABLE_LABELS = {
++        "1", "2", "3", "4", "5", "6", "7", "8",
++        "9", "0", "a", "b", "c", "d", "e", "f"
++    };
+ 
+     bool process_lookup_table_key_event (uint keyval,
+                                          uint keycode,

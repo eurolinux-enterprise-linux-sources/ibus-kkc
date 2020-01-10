@@ -1,0 +1,27 @@
+From 874246491f69502397b6d82138a6a743b8216eae Mon Sep 17 00:00:00 2001
+From: Daiki Ueno <ueno@gnu.org>
+Date: Wed, 2 Sep 2015 16:09:00 +0900
+Subject: [PATCH] engine: Ignore annotations marked as "?"
+
+Reported by Bhushan Barve.
+---
+ src/engine.vala | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+Index: ibus-kkc-1.5.18/src/engine.vala
+===================================================================
+--- ibus-kkc-1.5.18.orig/src/engine.vala
++++ ibus-kkc-1.5.18/src/engine.vala
+@@ -201,7 +201,11 @@ class KkcEngine : IBus.Engine {
+                                          context.candidates.page_start);
+             update_lookup_table_fast (lookup_table, true);
+             var candidate = context.candidates.get ();
+-            if (show_annotation && candidate.annotation != null) {
++            if (show_annotation
++                && candidate.annotation != null
++                // SKK-JISYO.* has annotations marked as "?" for
++                // development purposes.
++                && candidate.annotation != "?") {
+                 var text = new IBus.Text.from_string (
+                     candidate.annotation);
+                 update_auxiliary_text (text, true);

@@ -1,0 +1,55 @@
+From d18d7048f98f958dbf3e06b9b6c7801e4197a7dd Mon Sep 17 00:00:00 2001
+From: Daiki Ueno <ueno@unixuser.org>
+Date: Mon, 16 Dec 2013 17:15:43 +0900
+Subject: [PATCH] Instantly apply page-start and page-size settings change
+
+Reported by Mike FABIAN at
+https://bugzilla.redhat.com/show_bug.cgi?id=1024061
+---
+ src/engine.vala | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+Index: ibus-kkc-1.5.18/src/engine.vala
+===================================================================
+--- ibus-kkc-1.5.18.orig/src/engine.vala
++++ ibus-kkc-1.5.18/src/engine.vala
+@@ -33,7 +33,6 @@ class KkcEngine : IBus.Engine {
+ 
+     Kkc.Context context;
+     IBus.LookupTable lookup_table;
+-    uint page_start;
+     bool lookup_table_visible;
+ 
+     bool use_custom_keymap;
+@@ -185,7 +184,7 @@ class KkcEngine : IBus.Engine {
+ 
+     void populate_lookup_table () {
+         lookup_table.clear ();
+-        for (int i = (int) page_start;
++        for (int i = (int) context.candidates.page_start;
+              i < context.candidates.size;
+              i++) {
+             var text = new IBus.Text.from_string (
+@@ -276,8 +275,6 @@ class KkcEngine : IBus.Engine {
+     }
+ 
+     void update_candidates () {
+-        context.candidates.page_start = page_start;
+-        context.candidates.page_size = lookup_table.get_page_size ();
+         populate_lookup_table ();
+         set_lookup_table_cursor_pos ();
+     }
+@@ -359,11 +356,12 @@ class KkcEngine : IBus.Engine {
+ 
+         variant = preferences.get ("page_size");
+         assert (variant != null);
++        context.candidates.page_size = (uint) variant.get_int32 ();
+         lookup_table.set_page_size (variant.get_int32 ());
+ 
+         variant = preferences.get ("pagination_start");
+         assert (variant != null);
+-        page_start = (uint) variant.get_int32 ();
++        context.candidates.page_start = (uint) variant.get_int32 ();
+ 
+         variant = preferences.get ("initial_input_mode");
+         assert (variant != null);

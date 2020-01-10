@@ -1,0 +1,91 @@
+From c530c0a2bdc68102397973e0b3fe2262ce6a11d5 Mon Sep 17 00:00:00 2001
+From: Daiki Ueno <ueno@gnu.org>
+Date: Mon, 23 May 2016 18:47:30 +0900
+Subject: [PATCH] engine: Reduce the number of UpdateProperty sent
+
+Reported by Bhushan Barve.
+---
+ src/engine.vala   | 34 ++++++++++++++++++++++++++--------
+ src/ibus-1.0.vapi |  1 +
+ 2 files changed, 27 insertions(+), 8 deletions(-)
+
+Index: ibus-kkc-1.5.18/src/engine.vala
+===================================================================
+--- ibus-kkc-1.5.18.orig/src/engine.vala
++++ ibus-kkc-1.5.18/src/engine.vala
+@@ -284,33 +284,54 @@ class KkcEngine : IBus.Engine {
+     }
+ 
+     void update_input_mode () {
++        bool changed;
++
+         // Update the menu item
+         var iter = input_mode_props.map_iterator ();
+         if (iter.first ()) {
+             do {
+                 var input_mode = iter.get_key ();
+                 var prop = iter.get_value ();
+-                if (input_mode == context.input_mode)
+-                    prop.set_state (IBus.PropState.CHECKED);
+-                else
+-                    prop.set_state (IBus.PropState.UNCHECKED);
+-                if (properties_registered)
++
++                changed = false;
++                if (input_mode == context.input_mode) {
++                    if (prop.get_state () == IBus.PropState.UNCHECKED) {
++                        prop.set_state (IBus.PropState.CHECKED);
++                        changed = true;
++                    }
++                } else {
++                    if (prop.get_state () == IBus.PropState.CHECKED) {
++                        prop.set_state (IBus.PropState.UNCHECKED);
++                        changed = true;
++                    }
++                }
++                if (changed && properties_registered)
+                     update_property (prop);
+             } while (iter.next ());
+         }
+ 
+         // Update the menu
++        changed = false;
+         var symbol = new IBus.Text.from_string (
+             input_mode_symbols.get (context.input_mode));
+ #if IBUS_1_5
+         var label = new IBus.Text.from_string (
+             _("Input Mode (%s)").printf (symbol.text));
+-        input_mode_prop.set_label (label);
+-        input_mode_prop.set_symbol (symbol);
++        if (input_mode_prop.get_symbol () != symbol) {
++            input_mode_prop.set_symbol (symbol);
++            changed = true;
++        }
++        if (input_mode_prop.get_label () != label) {
++            input_mode_prop.set_label (label);
++            changed = true;
++        }
+ #else
+-        input_mode_prop.set_label (symbol);
++        if (input_mode_prop.get_label () != label) {
++            input_mode_prop.set_label (label);
++            changed = true;
++        }
+ #endif
+-        if (properties_registered)
++        if (changed && properties_registered)
+             update_property (input_mode_prop);
+     }
+ 
+Index: ibus-kkc-1.5.18/src/ibus-1.0.vapi
+===================================================================
+--- ibus-kkc-1.5.18.orig/src/ibus-1.0.vapi
++++ ibus-kkc-1.5.18/src/ibus-1.0.vapi
+@@ -439,6 +439,7 @@ namespace IBus {
+ 		public unowned string get_icon ();
+ 		public unowned string get_key ();
+ 		public unowned IBus.Text get_label ();
++		public unowned IBus.Text get_symbol ();
+ 		public IBus.PropType get_prop_type ();
+ 		public bool get_sensitive ();
+ 		public IBus.PropState get_state ();
