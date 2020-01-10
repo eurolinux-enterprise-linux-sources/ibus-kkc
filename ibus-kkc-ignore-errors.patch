@@ -1,0 +1,46 @@
+commit 88176c9cedd0a97e38ac905d152b4dd8f99e16b9
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   Mon Dec 16 13:30:24 2013 +0900
+
+    Don't error out even if loading dictionaries fails
+
+diff --git a/src/engine.vala b/src/engine.vala
+index a72fbc4..1b4cf22 100644
+--- a/src/engine.vala
++++ b/src/engine.vala
+@@ -316,8 +316,14 @@ class KkcEngine : IBus.Engine {
+ 
+         variant = preferences.get ("user_dictionary");
+         if (variant != null) {
+-            KkcEngine.dictionaries.add (new Kkc.UserDictionary (
+-                                            variant.get_string ()));
++            try {
++                KkcEngine.dictionaries.add (new Kkc.UserDictionary (
++                    variant.get_string ()));
++            } catch (Error e) {
++                warning ("can't load user dictionary %s: %s",
++                         variant.get_string (),
++                         e.message);
++            }
+         }
+ 
+         variant = preferences.get ("system_dictionaries");
+@@ -325,9 +331,15 @@ class KkcEngine : IBus.Engine {
+         string[] strv = variant.dup_strv ();
+         foreach (var id in strv) {
+             var metadata = preferences.get_dictionary_metadata (id);
+-            KkcEngine.dictionaries.add (
+-                new Kkc.SystemSegmentDictionary (metadata.filename,
+-                                                 metadata.encoding));
++            try {
++                KkcEngine.dictionaries.add (
++                    new Kkc.SystemSegmentDictionary (metadata.filename,
++                                                     metadata.encoding));
++            } catch (Error e) {
++                warning ("can't load system dictionary %s: %s",
++                         metadata.filename,
++                         e.message);
++            }
+         }
+     }
+ 
