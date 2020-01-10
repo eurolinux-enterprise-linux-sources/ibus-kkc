@@ -1,0 +1,111 @@
+Name:		ibus-kkc
+Version:	1.5.18
+Release:	1%{?dist}
+Summary:	Japanese Kana Kanji input method for ibus
+
+Group:		System Environment/Libraries
+License:	GPLv2+
+URL:		https://bitbucket.org/libkkc
+Source0:	https://bitbucket.org/libkkc/ibus-kkc/downloads/%{name}-%{version}.tar.gz
+
+BuildRequires:	vala
+BuildRequires:	intltool
+BuildRequires:	libkkc-devel >= 0.2.4
+BuildRequires:	ibus-devel
+BuildRequires:	gtk3-devel
+BuildRequires:	desktop-file-utils
+Requires:	ibus
+
+%description
+A Japanese Kana Kanji Input Method Engine for ibus.
+
+
+%prep
+%setup -q
+rm src/*vala.stamp
+# don't touch XKB layout under Fedora
+sed -i 's!<layout>jp</layout>!<layout>default</layout>!' src/kkc.xml.in.in
+
+
+%build
+%configure
+make %{?_smp_mflags}
+
+
+%install
+%make_install INSTALL="install -p"
+
+desktop-file-validate %{buildroot}/%{_datadir}/applications/ibus-setup-kkc.desktop
+
+%find_lang %{name}
+
+
+%files -f %{name}.lang
+%doc AUTHORS COPYING ChangeLog README
+%{_datadir}/ibus-kkc
+%{_libexecdir}/ibus-*-kkc
+%{_datadir}/ibus/component/kkc.xml
+%{_datadir}/applications/ibus-setup-kkc.desktop
+
+
+%changelog
+* Fri Sep 13 2013 Daiki Ueno <dueno@redhat.com> - 1.5.18-1
+- new upstream release, with improved dictionary selection UI (Closes: #1007648)
+
+* Tue Sep 10 2013 Daiki Ueno <dueno@redhat.com> - 1.5.17-1
+- new upstream release, to avoid redundant LM loading (Closes: #1004722)
+
+* Thu Jul 25 2013 Daiki Ueno <dueno@redhat.com> - 1.5.16-2
+- remove buildroot cleanup
+- validate .desktop file on %%install
+
+* Thu Jul 11 2013 Daiki Ueno <dueno@redhat.com> - 1.5.16-1
+- new upstream release (Closes: #980872)
+
+* Fri Jul  5 2013 Daiki Ueno <dueno@redhat.com> - 1.5.15-1
+- new upstream release
+
+* Fri Jun  7 2013 Daiki Ueno <dueno@redhat.com> - 1.5.14-1
+- new upstream release
+
+* Wed May 15 2013 Daiki Ueno <dueno@redhat.com> - 1.5.13-1
+- new upstream release
+
+* Thu May  9 2013 Daiki Ueno <dueno@redhat.com> - 1.5.12-1
+- new upstream release
+
+* Thu May  2 2013 Daiki Ueno <dueno@redhat.com> - 1.5.11-2
+- specify IBus version when configure
+
+* Wed May  1 2013 Daiki Ueno <dueno@redhat.com> - 1.5.11-1
+- new upstream release
+
+* Tue Mar 19 2013 Daiki Ueno <dueno@redhat.com> - 1.5.10-1
+- new upstream release
+
+* Tue Mar 12 2013 Daiki Ueno <dueno@redhat.com> - 1.5.9-1
+- new upstream release (Closes: #911495)
+
+* Fri Feb 22 2013 Daiki Ueno <dueno@redhat.com> - 1.5.7-1
+- new upstream release
+- don't touch XKB layout (#910959)
+
+* Mon Feb 11 2013 Daiki Ueno <dueno@redhat.com> - 1.5.6-1
+- new upstream release
+- change the license to GPLv2+
+
+* Tue Feb  5 2013 Daiki Ueno <dueno@redhat.com> - 1.5.5-1
+- new upstream release
+- re-add README to %%doc
+
+* Mon Feb  4 2013 Daiki Ueno <dueno@redhat.com> - 1.5.4-1
+- new upstream release
+- change the license to GPLv3+
+- remove empty README file from %%doc
+
+* Thu Jan 31 2013 Daiki Ueno <dueno@redhat.com> - 1.5.3-1
+- new upstream release
+
+* Thu Jan 24 2013 Daiki Ueno <dueno@redhat.com> - 1.5.0-1
+- initial packaging
+

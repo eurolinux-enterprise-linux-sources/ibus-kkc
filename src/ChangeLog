@@ -1,0 +1,1330 @@
+commit 920a26a358c8df9eab140ceb62efef7e985483b7
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 16:34:22 +0900
+
+    Bump version to 1.5.18
+
+M	configure.ac
+
+commit 620aa178c0644e18990c267d57352b012fd59e44
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 16:07:15 +0900
+
+    Don't pollute gconf/dconf database if config values are unset
+
+M	src/preferences.vala
+
+commit c8c9d3eea8338030824f7a8c1a7fc640ec7a5c75
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 15:30:21 +0900
+
+    Improve the last change
+
+M	src/dictionary.vala
+
+commit 798098f97df08416e1ffe18f3f2e1d33eb4354fc
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 15:14:42 +0900
+
+    dictionary: make "default_enabled" field optional
+
+M	src/dictionary.vala
+
+commit 6423c8e8586dc5a173f945df423e2726a6d7fa75
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 15:10:21 +0900
+
+    setup: don't list non-existent dictionaries
+
+M	src/dictionary.vala
+
+commit 89577b433b5f83200fc4b7b27089f2fe2cef724f
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 15:07:32 +0900
+
+    setup: add tooltip to the treeview on "add dictionary" dialog
+
+M	src/ibus-kkc-preferences.ui.in
+M	src/setup.vala
+
+commit 85942568f900b99d18b9214cec3002e4da0dfd90
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 13:36:16 +0900
+
+    setup: add more tooltips
+
+M	po/ja.po
+M	src/ibus-kkc-preferences.ui.in
+
+commit 61207094925695b11fdbb1f909e9496cf58adcba
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 13:10:03 +0900
+
+    setup: enable tooltips on dictionaries treeview
+
+M	src/ibus-kkc-preferences.ui.in
+M	src/setup.vala
+
+commit b645060c4f83603e653e8408faf65793029fd136
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 13:09:52 +0900
+
+    Fix translation
+
+M	po/ja.po
+
+commit eecac44a1acb09fa02b4f9796c35527e509f3895
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 12:58:23 +0900
+
+    setup: mark keymap combobox not sensitive by default
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit ec7d611e4ea9ce9a0715874e70966d7135e96a15
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 12:35:33 +0900
+
+    setup: avoid the dialog being too wide
+
+M	po/ja.po
+M	src/ibus-kkc-preferences.ui.in
+
+commit f6f64ecc91395611c793651f3e9f8d8045e4afa4
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 12:13:20 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit 6ac74bc9257c5bdb909aace5bab96bfa9c74cb47
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 12:13:12 +0900
+
+    Add more dictionaries to the registry
+
+M	src/ibus-kkc-dictionaries.json.in
+
+commit 576a63318ce843e46c8db537a24482a3c652422a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 11:53:21 +0900
+
+    setup: use GtkBox instead of GtkVBox
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit c2c8ecf6d07124ca333513fd5a3fa70ac9111d0b
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 11:46:39 +0900
+
+    setup: set up/down toolbutton sensitivity based on selection positions
+
+M	src/ibus-kkc-preferences.ui.in
+M	src/setup.vala
+
+commit 1d7466f99f6c11f837a30ed7cb628c64c58e0d22
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 11:35:11 +0900
+
+    setup: use toolbutton for dictionary toolbar
+
+M	src/ibus-kkc-preferences.ui.in
+M	src/setup.vala
+
+commit cba6c9566e30ee2f6e672c4bd5498b2a86ae982a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 10:32:11 +0900
+
+    Use separate gresource file for engine and setup
+
+M	src/Makefile.am
+A	src/ibus-engine-kkc.gresource.xml
+D	src/ibus-kkc.gresource.xml
+A	src/ibus-setup-kkc.gresource.xml
+
+commit 4be72ef3009600e8854d41c5f3f0eae3f074629a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 09:29:05 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit 44428b27b5e7accb76c56578d5a758eba07a8392
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-13 09:17:34 +0900
+
+    setup: embed icon in the resource
+
+M	src/dictionary.vala
+M	src/ibus-kkc-preferences.ui.in
+M	src/ibus-kkc.gresource.xml
+M	src/setup.vala
+
+commit 32fe40ed72db4c201433a04eb4306fce2c89e6e0
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-12 18:04:12 +0900
+
+    setup: add icon to the about page
+
+M	configure.ac
+M	src/Makefile.am
+M	src/ibus-kkc-preferences.ui.in
+
+commit 9be3139e7a589566ce01cfcd171696c76fb05f6a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-12 18:01:13 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit 1290ca651dff6582547ba32f44010296668465c5
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-12 18:00:56 +0900
+
+    build: ignore ibus-kkc-dictionaries.json
+
+M	src/Makefile.am
+
+commit e9024fa9f54cf29be27c2553fdfcff6e99be9ce0
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-12 17:56:57 +0900
+
+    setup: translate "IBus Kana Kanji" in the about page
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit 05ed0d6643864a53ee76677c2a8c182f67631a80
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-12 17:46:55 +0900
+
+    Disable annotation display by default
+
+M	src/preferences.vala
+
+commit 025a86e8807cc135387ece531f4ab5d5dd55cefa
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-12 17:36:23 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit 8bf73b815cbfcfdca9088c497d16b39e4f9a7e38
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-12 17:34:17 +0900
+
+    setup: redesign dictionary add dialog
+
+M	configure.ac
+M	src/Makefile.am
+A	src/dictionary.vala
+M	src/engine.vala
+M	src/ibus-kkc-dictionaries.json.in
+M	src/ibus-kkc-preferences.ui.in
+M	src/kkc.xml.in.in
+D	src/plist.vala
+M	src/preferences.vala
+M	src/setup.vala
+
+commit ab9c5ba319aef856fb9197b430461bd0f76728f5
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-12 11:28:30 +0900
+
+    setup: completely hide user dictionary from the treeview
+
+M	src/preferences.vala
+M	src/setup.vala
+
+commit ca62ce9bdba5df20ef0d2cef098561b01a7c62ff
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-11 16:48:32 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit a096d7e10f8b0311a56624fb65a7877cdb413e98
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-11 15:10:04 +0900
+
+    setup: simplify dictionary treeview
+
+M	po/POTFILES.in
+M	src/Makefile.am
+A	src/ibus-kkc-dictionaries.json.in
+M	src/ibus-kkc.gresource.xml
+M	src/setup.vala
+
+commit ce61f84a2c4603a7e501d35d15cc21985fb4839a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-10 17:40:55 +0900
+
+    Bump version to 1.5.17
+
+M	configure.ac
+
+commit 45789d7b179fff60cdd86f5d90c7049dd284cf1a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-10 17:35:38 +0900
+
+    engine: send translated keysym in direct input mode
+
+M	src/engine.vala
+
+commit 4c2020b97036f5f9d5e35c99df5509b3e7286c4d
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-09-10 17:12:36 +0900
+
+    engine: share language model among engine instances
+
+M	src/engine.vala
+
+commit 0aaa4f9a5491af7d42ba3c8b4859026224452665
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-08-16 18:11:14 +0200
+
+    setup: set sensitivity of keymap combobox
+
+M	src/setup.vala
+
+commit 1d079a64f95f141500ae304aceb386a33a425524
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-08-15 11:49:26 +0200
+
+    Update translations
+
+M	po/ja.po
+
+commit c4ae814db29eb1c5b6fea34771726825974e349a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-08-15 11:47:42 +0200
+
+    setup: add an option to use custom keymap
+
+M	src/engine.vala
+M	src/ibus-kkc-preferences.ui.in
+M	src/preferences.vala
+M	src/setup.vala
+
+commit a81da46a5458087490caf3e3b3aeb07f0165da31
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-07-29 09:48:11 +0900
+
+    Use common intl initialization idioms
+
+M	src/engine.vala
+M	src/setup.vala
+
+commit d1c2f35ac27bfe30477ce41ea113b65a9b12a88e
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-07-11 11:14:30 +0900
+
+    Bump version to 1.5.16
+
+M	configure.ac
+
+commit c6239ada38edacad04306cabf38d7fddae3eb1c1
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-07-06 11:31:44 +0900
+
+    Error out when ibus-config is not running
+
+M	src/engine.vala
+M	src/setup.vala
+
+commit 5225b238b031a39f188381b439ad5427fab17344
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-07-03 13:03:06 +0900
+
+    Bump version to 1.5.15
+
+M	configure.ac
+
+commit 3cc1b142e289eb51ac3778e3816511d47cec337f
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-07-03 13:01:32 +0900
+
+    Load ibus-kkc-preferences.ui from $(builddir) not $(srcdir)
+
+M	src/Makefile.am
+
+commit ff755f20a07d35ead239e90cd7844628a0186338
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-07-03 12:56:24 +0900
+
+    Require gtk+-3.0 >= 3.4 for GtkBuilder.add_from_resource()
+
+M	configure.ac
+
+commit 2ad3ec6f483570622d7296fa5c78ed48553e3cac
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-07-01 18:36:22 +0900
+
+    setup: notify engine when a shortcut has changed
+    
+    Reported by Akihiro TSUKADA in
+    <http://du-a.org/pipermail/libkkc-list/2013-June/000017.html>.
+
+M	src/setup.vala
+
+commit 493835e292026b188499285d41b6c31d8bb79d35
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-14 16:02:22 +0900
+
+    Suppress valac warnings
+
+M	src/engine.vala
+M	src/ibus-1.0.vapi
+
+commit d2358ea22346ece53a18cce8b426190f76af5c2a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-14 15:49:20 +0900
+
+    Compress .ui file
+
+M	src/ibus-kkc.gresource.xml
+
+commit 43e996affc35d39bffaff0aee334c7bac044fab3
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-14 13:03:37 +0900
+
+    Delete ibus-kkc-resources.c when make clean.
+
+M	src/Makefile.am
+
+commit 552601993cfae4c9a13e081b7171dd94078efe0e
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-14 12:27:55 +0900
+
+    Read ibus-kkc-preferences.ui from GResource
+
+M	configure.ac
+M	src/Makefile.am
+A	src/ibus-kkc.gresource.xml
+M	src/setup.vala
+
+commit bf569c1dedcccd7f48033bb1c4c0d0833fffd8bd
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-07 18:45:12 +0900
+
+    Bump version to 1.5.14
+
+M	configure.ac
+
+commit 12c6ef065086b4b8850cceec3db399a98d322a1f
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-07 18:47:25 +0900
+
+    Require libkkc >= 0.2.4
+
+M	configure.ac
+
+commit 017a42b6063bc8bdbc08ffccb8d1d2ebddb14ea4
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-06 19:08:05 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit d820ddda77809645428c8afde39d11d2ed1b3afb
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-06 19:01:23 +0900
+
+    Expose auto-correct option
+
+M	src/engine.vala
+M	src/ibus-kkc-preferences.ui.in
+M	src/preferences.vala
+M	src/setup.vala
+
+commit f23a538f8fe5bf27425654305becd93760985394
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-06-06 11:58:43 +0900
+
+    Place cursor at the beginning of selected segment in preedit
+    
+    https://bitbucket.org/libkkc/libkkc/issue/2
+
+M	src/engine.vala
+
+commit 66aac89213bd71f94432424a321089305960a9b4
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-20 15:03:53 +0900
+
+    Implement page-up/page-down/cursor-up/cursor-down signals
+
+M	src/engine.vala
+
+commit fb44306d09a41e3c74b5c9eb198581e413243ae5
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-15 15:34:46 +0900
+
+    Bump version to 1.5.13
+
+M	configure.ac
+
+commit ddb757d500ea16ed6cef6aa9dcafcccf840b34d1
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-13 16:34:53 +0900
+
+    Fix bug report address
+
+M	configure.ac
+
+commit 5d1eec8ebb43b0be8114cd2dca47e2ddc6f75341
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-13 16:30:24 +0900
+
+    Update FSF address
+
+M	Makefile.am
+M	configure.ac
+M	m4/Makefile.am
+M	src/Makefile.am
+
+commit 724529f14092c9101116a5490baeb7714b203efa
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-10 17:48:23 +0900
+
+    setup: move "Dictionaries" tab to the 3rd position
+    
+    https://bugzilla.redhat.com/show_bug.cgi?id=961587
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit 67a1611f99662d85baf2c5556582a8739a10aa10
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-10 17:41:28 +0900
+
+    Follow libkkc API change
+
+M	src/engine.vala
+M	src/setup.vala
+
+commit 48a23775a501c5c298a83dfbb994a0f3d0c860f3
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-09 17:46:45 +0900
+
+    Implement IBus.Engine.candidate_clicked
+
+M	src/engine.vala
+
+commit 4c44570809e19f3604b41393c924a8c976041b69
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-08 19:53:02 +0900
+
+    Bump version to 1.5.12
+
+M	configure.ac
+
+commit c978bc2813f8ab69658abd1c1aac87908bb03216
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-08 19:18:16 +0900
+
+    Highlight preedit cursor when editing
+
+M	src/engine.vala
+
+commit 7bf62ba88535334598f3187153a178b6683ea8fd
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-07 19:34:59 +0900
+
+    Always handle cursor movement keys
+
+M	src/engine.vala
+
+commit 09c2089ccd695e8b7f367edcfe52f85a7ac17ac4
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-05-02 13:23:51 +0900
+
+    Fix IBus version check in configure
+
+M	configure.ac
+
+commit f28769c7f4d7a609b2a68c5f012aee3d16b60898
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-30 13:39:06 +0900
+
+    Bump version to 1.5.11
+
+M	configure.ac
+
+commit 512a086d2ccb72e3d889eeb561b2c7818b4cd743
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-30 13:43:12 +0900
+
+    Force --with-ibus=1.4 when make distcheck
+
+M	Makefile.am
+
+commit ca4357feb173d2f8cc498d03c749ca09b1bb6a57
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-26 17:53:18 +0900
+
+    Add configure option to specify IBus API version
+
+M	configure.ac
+
+commit 6abf77bbd13a05d3286fb2605b0d8f04b9c35cfe
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-09 14:50:20 +0900
+
+    Use Kkc.UserRule
+
+M	src/Makefile.am
+M	src/engine.vala
+M	src/setup.vala
+D	src/user-rule.vala
+
+commit 9765411fe7447092690aae593dd4be960048c0c4
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-08 13:31:16 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit cd26ad3763160f7cdb886ed308e4d2510fa56ee8
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-08 13:30:19 +0900
+
+    setup: use Kkc.Rule.priority instead of custom translation
+
+M	src/setup.vala
+
+commit c3cf8066646dcbff7b0ba14ddace3c39e463c585
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-07 10:04:24 +0900
+
+    Fix user rule override
+
+M	src/user-rule.vala
+
+commit 09338576818da8e7e4bc6231676cabe3f0a96711
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-07 09:53:27 +0900
+
+    Fix user rule creation
+
+M	src/user-rule.vala
+
+commit 16bf716b18d0a59d5042411883e4c5adc45b5d13
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-02 22:51:48 +0900
+
+    setup: align combobox
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit 09638a5d7b01bf3f554cbe410803d97309b0c56a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-02 22:05:41 +0900
+
+    Fix build with vala 0.16
+
+M	src/setup.vala
+
+commit ee6a5d91ea1accb2e7d3e55209451ce541fb0795
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-02 19:13:57 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit f9e125207d2947bb9c833ea650d0a8c1b89a0065
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-04-02 19:13:32 +0900
+
+    setup: only show default and kana typing rules
+
+M	src/setup.vala
+
+commit 72ecf4cfccbee94af9495f1c5290aa691acb872c
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-28 18:28:13 +0900
+
+    Simplify InputMode handling using EnumClass
+
+M	src/user-rule.vala
+
+commit 2a2a7c261327964733d54055d845a35a3b879388
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-25 06:51:32 +0900
+
+    shortcut-editor: make Escape and BackSpace unmodifiable
+
+M	src/setup.vala
+
+commit cef0a34fe0c21e960fe5f5d67a5e9ceda8aac6d0
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-22 17:14:11 +0900
+
+    Link libutil.la with COMMON_LIBS for explicit DSO linking
+
+M	src/Makefile.am
+
+commit 636f574736330cfdcb5d2effa1f163848e6424bd
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-19 16:07:03 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit 9a6a542083ba223583b514decf128b4c131fe40b
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-19 16:06:18 +0900
+
+    Allow line wrapping of help text to shortcut editor
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit 5fee03665a199826da3fc682eb2b704f8cb454f5
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-19 15:58:51 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit 7b52855381377233946507e1464993d312157bb8
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-19 15:13:42 +0900
+
+    Bump version to 1.5.10
+
+M	configure.ac
+
+commit e99b9dfa19a11744ed43c063e5432e40c5493c19
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-19 15:04:12 +0900
+
+    Require libkkc >= 0.1.10
+
+M	configure.ac
+
+commit 213f0023112725739b5bed039092c4faff513243
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-07 09:08:01 +0900
+
+    Add "Shortcuts" tab to ibus-setup-kkc
+
+M	src/Makefile.am
+M	src/engine.vala
+M	src/ibus-kkc-preferences.ui.in
+M	src/setup.vala
+A	src/user-rule.vala
+
+commit 68961c1e0cddda1568fa98b2cd84f91c44e4ed68
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-12 15:21:01 +0900
+
+    Implement instant-apply guideline for the preferences window
+
+M	src/ibus-kkc-preferences.ui.in
+M	src/preferences.vala
+M	src/setup.vala
+
+commit 8c5461ef9a362f6eb53b8bfe4f0d0decd1784a20
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-12 14:46:13 +0900
+
+    Add textdomain to component XML
+
+M	src/kkc.xml.in.in
+
+commit 2239b87bac112957a9f707d29d97539dff35bfce
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-11 17:31:37 +0900
+
+    Change the preedit background color
+
+M	src/engine.vala
+
+commit 2c9ed0e982cd1310437687226ccf2fd41cabec36
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-08 19:25:53 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit 2d17e8a3a86f02347df9d5a234fb06a3fd36b0e2
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-08 19:24:54 +0900
+
+    Adjust the preferences window title to the guideline
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit ea71b2d181e182a2c6939c2ab3b4face79093910
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-08 17:47:16 +0900
+
+    Update translations
+
+M	po/ja.po
+
+commit ae0bdb248093bd095bf5039476f1b0d13e98dd11
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-08 17:45:30 +0900
+
+    Mark @VERSION@ panel untranslatable
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit 5cc1d00cc18020904783cbcc5e43353ade4fb170
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-08 17:44:28 +0900
+
+    Move down desktop_in_* definitions below $(edit)
+
+M	src/Makefile.am
+
+commit dec3630baefa88174cd00dc3cc3af3a7145ef0a8
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-02 18:13:14 +0900
+
+    Remove "skk" reference.
+
+M	icons/ibus-kkc.svg
+M	src/engine.vala
+
+commit 217ee8761d1bcfc54c9c320d65e10b8a60e1474e
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-02 16:52:27 +0900
+
+    Bump version to 1.5.8.
+
+M	configure.ac
+
+commit 12f059a33b9312745500ad8ef7018b6e22fb6646
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-02 16:50:33 +0900
+
+    Fix the last commit.
+
+M	src/kkc.xml.in.in
+
+commit 6fa19cb16282be88d5a61353e708fcb65a3b72d6
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-02 13:53:42 +0900
+
+    Update translation.
+
+M	po/ja.po
+
+commit 227be01bbb9378011ddd9dba4d0317390db57514
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-02 13:50:33 +0900
+
+    Remove xml.in.in.in.
+
+M	configure.ac
+M	po/POTFILES.in
+M	po/POTFILES.skip
+M	src/Makefile.am
+A	src/kkc.xml.in.in
+D	src/kkc.xml.in.in.in
+
+commit c90c185d6cb69a0fb6b3b0aeaa2bad427ddcbb78
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-02 09:25:30 +0900
+
+    Add error check to kkc.xml.in generation.
+
+M	src/Makefile.am
+
+commit 994e4ec7050b5f7fea67abffc0ca34e9ea99aa99
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-02 09:21:23 +0900
+
+    Simplify kkc.xml.in generation.
+
+M	src/Makefile.am
+
+commit 810bd8ce817aba9669a2fe5386074b1930a13779
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-01 19:04:29 +0900
+
+    Fix input mode property update.
+
+M	src/engine.vala
+
+commit 36b4ff23c49b4145c52bad29a92481e9a6858130
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-01 17:52:38 +0900
+
+    Update input mode labels.
+
+M	po/ja.po
+M	src/engine.vala
+
+commit 5af1398066b740119c915cdb7add71e30d1875e5
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-03-01 17:47:47 +0900
+
+    Set symbol property of input mode props.
+
+M	configure.ac
+M	src/Makefile.am
+M	src/engine.vala
+M	src/ibus-1.0.vapi
+
+commit 913816c02baa6b4edbd7fe8e8c9fe109351721ff
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-22 18:00:14 +0900
+
+    Bump version to 1.5.7.
+
+M	configure.ac
+
+commit 70998aff96645e383fce815510762d369bf07a73
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-22 18:00:48 +0900
+
+    Update git.mk.
+
+M	git.mk
+
+commit 238a02e8181b901245756ab9de9edd409c6b4c05
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-22 17:59:25 +0900
+
+    Use Kkc.KeyEvent.from_x_event.
+
+M	configure.ac
+M	src/engine.vala
+
+commit 5faf7f9d71c5fcce37c60bbce2ba8955eb570cce
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-14 18:36:12 +0900
+
+    Fix URL in the setup UI.
+
+M	src/ibus-kkc-preferences.ui.in
+
+commit 75c128bd93bd6a4c90cacefc8861061be8041bf4
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-08 11:35:33 +0900
+
+    Show 10 candidates instead of 9, by default.
+
+M	src/engine.vala
+M	src/preferences.vala
+
+commit 5bacd5f7bff6dbafef68c81cb1b27ce546789b0b
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-07 18:56:09 +0900
+
+    Include GPLv2 text.
+
+A	COPYING
+
+commit 4a8efe2d40d7a1103688defbfaa74fa7eede663f
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-10 09:53:12 +0900
+
+    Bump version to 1.5.6.
+
+M	configure.ac
+
+commit 941cb1e742be2a4e7d4ba7dd4e84ade2ff765426
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-05 22:48:43 +0900
+
+    Specify foreground attribute to selected segment to make firefox happy.
+
+M	src/engine.vala
+
+commit fe34c5d891737c87611971363fb7bb13dc3531b7
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-05 11:14:03 +0900
+
+    Bump version to 1.5.5.
+
+M	configure.ac
+
+commit ac14c660a6c66b59588d21bdacafa84b265f1762
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-05 11:13:01 +0900
+
+    Use interval timer instead of idle timer for saving dictionaries.
+
+M	src/engine.vala
+
+commit 725cdd2ef16c79baf00fcc9013331578d7275509
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-04 19:01:43 +0900
+
+    Add some text to README.
+
+M	README
+
+commit 7f2251a2ef7e532739a81a8ce959bb62a75cfd34
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-04 18:45:19 +0900
+
+    Fix ibus-setup-skk crash on non-C locale.
+
+M	src/ibus-kkc-preferences.ui.in
+M	src/setup.vala
+
+commit 7236fd1f87d5d2e9ad3604ff19675d9f45eeba7d
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-03 08:22:39 +0900
+
+    Follow the libkkc API change.
+
+M	src/engine.vala
+
+commit d9b1e4374006eca935fdec063ad387799418e3d0
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-03 05:53:55 +0900
+
+    Bump version to 1.5.4.
+
+M	configure.ac
+
+commit 28befe1d4f9e1bf1ab405a12904c1f78036aa2f8
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-02 21:40:41 +0900
+
+    Remove SKK server settings.
+
+M	src/setup.vala
+
+commit a1d82e5b3aafef614a81366a612006f50be65b53
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-02 21:35:33 +0900
+
+    Remove SKK server settings.
+
+M	po/ja.po
+M	src/ibus-kkc-preferences.ui.in
+M	src/setup.vala
+
+commit 65c638ee68e3e5703146ae3c1850314f896cb65c
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-02 18:31:11 +0900
+
+    Fix typo.
+
+M	src/engine.vala
+M	src/ibus-kkc-preferences.ui.in
+M	src/preferences.vala
+M	src/setup.vala
+
+commit 084f219d1c7a929faf9ad1c7ef13a2264f99d1c2
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-02 15:39:03 +0900
+
+    Update translation.
+
+M	po/ja.po
+
+commit 21ab59a3f030e07d4b2b6f07879a594bc90f9527
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-02 15:38:11 +0900
+
+    Implement direct input mode.
+
+M	src/engine.vala
+M	src/ibus-kkc-preferences.ui.in
+
+commit 111bbf9b34cd6c1d0435420893267b8c994868e8
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-02 10:04:28 +0900
+
+    Implement word registration based on selection.
+
+M	src/Makefile.am
+M	src/engine.vala
+
+commit f9a4f0a75ad48f960b0075556b82be361a1415f8
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-02-02 07:01:46 +0900
+
+    "period" -> "punctuation".
+
+M	src/engine.vala
+M	src/preferences.vala
+M	src/setup.vala
+
+commit 931e3d6133b47c191e22384eca2ff237a3188151
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-31 22:33:18 +0900
+
+    Specify priority of idle timer.
+
+M	src/engine.vala
+
+commit b71966f5343e9a009c334d1494405a8c9b7b7354
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-31 22:05:15 +0900
+
+    Save dictionaries on idle.
+
+M	src/engine.vala
+
+commit 92fbc19caa479cd5a6d685c934f239a0d221553a
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-31 18:02:10 +0900
+
+    Bump version to 1.5.3.
+
+M	configure.ac
+
+commit 54d54b6ae5ab0b2e56a96ab7986820280b8c123f
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-31 17:45:47 +0900
+
+    Follow libkkc pkgconfig name change.
+
+M	configure.ac
+
+commit e388f558e3eff3e538fa48ee0c2275e7d743964c
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-30 18:06:40 +0900
+
+    Follow the libkkc API change.
+
+M	src/engine.vala
+
+commit eb042df479cdad0d037e16016fda3d2cae99aaa1
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-27 10:58:46 +0900
+
+    Revert "Fix regression with lookup table keys."
+    
+    This reverts commit bd88c2a39f7bea313b88be2441c3243b869fffde.
+
+M	src/engine.vala
+
+commit bd88c2a39f7bea313b88be2441c3243b869fffde
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-27 09:55:41 +0900
+
+    Fix regression with lookup table keys.
+
+M	src/engine.vala
+
+commit 8c52a3c59e0a5ff7f9a496f13538b73db667811b
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-26 16:03:19 +0900
+
+    Prevent @libexecdir@ from being replaced.
+
+M	src/Makefile.am
+M	src/kkc.xml.in.in.in
+
+commit 03e09c0aac6543f4a0cedbbba2c7bb4ebe8d2296
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-26 15:35:00 +0900
+
+    Bump version to 1.5.2.
+
+M	configure.ac
+
+commit 1107146f884ec1d2e0c7b78103cf86e4336648db
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-26 15:08:49 +0900
+
+    Fix make distcheck.
+
+M	Makefile.am
+M	configure.ac
+D	kkc.xml.in.in.in
+M	po/POTFILES.in
+M	po/POTFILES.skip
+M	src/Makefile.am
+A	src/kkc.xml.in.in.in
+
+commit aaaf8f005b1828500db63497150ae6ff9099f485
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-25 19:45:20 +0900
+
+    Check if there is pending output before actually retrieving it.
+
+M	src/engine.vala
+
+commit d44e6351d97a0423d04af5cac5b007ecb81acec2
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-25 17:55:04 +0900
+
+    Update copyright year and email.
+
+M	AUTHORS
+M	Makefile.am
+M	configure.ac
+M	icons/Makefile.am
+M	src/engine.vala
+M	src/plist.vala
+M	src/preferences.vala
+M	src/setup.vala
+
+commit 1646e0cd73a7cd4c5b6989ab49c784802656a12c
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-25 17:46:39 +0900
+
+    Don't commit text in process_key_event.
+
+M	src/engine.vala
+
+commit 65651964449a17445ce87f7f7dca86dc1fa5b20e
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-25 17:15:02 +0900
+
+    Minor fixes.
+
+M	src/engine.vala
+
+commit a00d907fc1ae3a31671a0ab517f9ce610783d450
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-25 16:17:34 +0900
+
+    Update version to 1.5.1.
+
+M	configure.ac
+
+commit 1180b54eb1b794348bf0ae60afcaf25b28c3d8ef
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-25 16:17:12 +0900
+
+    Follow the libkkc API change.
+
+M	src/engine.vala
+M	src/preferences.vala
+
+commit a1b1fb9bc47f96030a0574460b22c507837f0665
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-24 10:50:50 +0900
+
+    Follow the libkkc API change.
+
+M	src/engine.vala
+
+commit 3b87f3641a4f8590b989a313d895441046101bb9
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-23 12:38:17 +0900
+
+    Try to translate engine information.
+
+M	Makefile.am
+M	configure.ac
+D	kkc.xml.in.in
+A	kkc.xml.in.in.in
+M	po/POTFILES.in
+M	po/ja.po
+M	src/engine.vala
+M	src/ibus-kkc-preferences.ui.in
+M	src/ibus-setup-kkc.desktop.in.in
+
+commit 01e00c25488d17bddcc6b3aa97a0d4a7e5316db8
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-23 12:15:15 +0900
+
+    Follow the libkkc API change.
+
+M	src/engine.vala
+
+commit 68ea7a349b84f69fe7493afb68b5e4ffd3651cf0
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-22 12:54:50 +0900
+
+    "KKC" -> "Kana Kanji"
+
+M	kkc.xml.in.in
+M	src/engine.vala
+
+commit aa4a5a77c46dc2e1d4db701fe14b8c7c3bf7b255
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-22 12:54:20 +0900
+
+    Add .dir-locals.el.
+
+A	.dir-locals.el
+
+commit e677cfbe52ab14e1f709814d1446ebdbe45f3e2c
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-22 12:53:57 +0900
+
+    Follow the libkkc API change.
+
+M	src/engine.vala
+
+commit 53b215ca99eadc2cdfef4c3cdcb99471321f400d
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-22 08:11:48 +0900
+
+    Make lookup table vertical
+
+M	src/engine.vala
+M	src/preferences.vala
+
+commit 491c032b5bff5b228cb4831b0e04384bb71ea8dc
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-21 22:30:09 +0900
+
+    Update preference UI
+
+A	ChangeLog
+A	m4/Makefile.am
+M	src/ibus-kkc-preferences.ui.in
+M	src/setup.vala
+
+commit 451a8849acd6ebf2b6eeb2fe34f577be9464fad9
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-21 18:13:14 +0900
+
+    Follow the latest libkkc change.
+
+M	src/engine.vala
+M	src/preferences.vala
+
+commit b66445ece2d30d7583d9141154a07d561ed991d2
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2013-01-17 10:12:50 +0900
+
+    Rename KKC -> Kana Kanji, in component file.
+
+M	kkc.xml.in.in
+
+commit c45ab644cd0cffc59bbc43161ec7aa89ebd6937b
+Author: Daiki Ueno <ueno@unixuser.org>
+Date:   2012-11-05 14:15:18 +0900
+
+    Initial import.
+
+A	AUTHORS
+A	Makefile.am
+A	NEWS
+A	README
+A	autogen.sh
+A	configure.ac
+A	git.mk
+A	ibus-kkc.spec.in
+A	icons/Makefile.am
+A	icons/ibus-kkc.svg
+A	kkc.xml.in.in
+A	po/LINGUAS
+A	po/Makevars
+A	po/POTFILES.in
+A	po/POTFILES.skip
+A	po/ja.po
+A	src/Makefile.am
+A	src/config.vapi
+A	src/engine.vala
+A	src/ibus-1.0.deps
+A	src/ibus-1.0.vapi
+A	src/ibus-kkc-preferences.ui.in
+A	src/ibus-kkc.deps
+A	src/ibus-setup-kkc.desktop.in.in
+A	src/plist.vala
+A	src/preferences.vala
+A	src/setup.vala
